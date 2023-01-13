@@ -16,14 +16,14 @@
         <label for="carne">Escolha a carne do seu Burger:</label>
         <select name="meat" id="meat" v-model="meat">
           <option value="">Selecione o tipo de carne</option>
-          <option v-for="meat in meats" :key="meat.id" :value="meat.tipo">{{ meat.tipo }}</option>
+          <option v-for="meat in state.meats" :key="meat.id" :value="meat.type">{{ meat.type }}</option>
         </select>
       </div>
       <div id="opcionais-container" class="input-container">
         <label id="opcionais-title" for="opcionais">Selecione os opcionais:</label>
-        <div class="checkbox-container" v-for="optional in optionalData" :key="optional.id">
-          <input type="checkbox" name="opcionais" v-model="optionals" :value="optional.tipo">
-          <span>{{ optional.tipo }}</span>
+        <div class="checkbox-container" v-for="optional in state.optionalData" :key="optional.id">
+          <input type="checkbox" name="opcionais" v-model="optionals" :value="optional.type">
+          <span>{{ optional.type }}</span>
         </div>
       </div>
       <div class="input-container">
@@ -53,10 +53,12 @@ export default {
     })
 
     async function getIngredients() {
-      
       try {
         services.ingredients.get().then((data) => {
           state.breads = data.data.breads
+          state.meats = data.data.meats
+          state.optionalData = data.data.optionals
+          console.log(data)
         })
       } catch (error) {
         
