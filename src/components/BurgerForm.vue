@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import Swal from 'sweetalert2'
 import { reactive, onMounted } from 'vue'
 import services from '@/services'
 
@@ -53,19 +54,21 @@ export default {
     })
 
     async function getIngredients() {
-      try {
-        services.ingredients.get().then((data) => {
+        await services.ingredients.get().then((data) => {
           state.breads = data.data.breads
           state.meats = data.data.meats
           state.optionalData = data.data.optionals
-          console.log(data)
+        }).catch(err => {
+          Swal.fire({
+            title: 'OPPS',
+            text: err,
+            icon: 'error',
+          });
         })
-      } catch (error) {
-        
-      }
     }
 
     onMounted(() => {
+      
       getIngredients()
     })
 

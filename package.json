@@ -4,14 +4,14 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "api": "json-server --watch db/db.json"
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "axios": "^1.2.2",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.3",
+    "vue-sweetalert2": "^5.0.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
