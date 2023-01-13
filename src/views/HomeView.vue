@@ -1,13 +1,22 @@
 <template>
-  <div class="home">
-    
+  <div>
+    <Banner />
+    <div class="main-container">
+      <h1>Monte o seu burger:</h1>
+      <BurgerForm />
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import Banner from '../components/Banner'
+import BurgerForm from '../components/BurgerForm'
 
 export default {
-  name: 'HomeView',
+  name: 'Home',
+  components: {
+    Banner,
+    BurgerForm
+  }
 }
 </script>

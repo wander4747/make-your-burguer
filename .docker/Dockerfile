@@ -23,6 +23,5 @@ ADD start.sh /
 RUN chmod +x /start.sh
 
 EXPOSE 8080
-EXPOSE 3000
 
 CMD ["/start.sh"]
