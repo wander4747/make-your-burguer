@@ -1,4 +1,5 @@
 <template>
+  <Message :text="state.message" v-show="state.message" />
   <div>
     <form id="burger-form" method="POST" @submit="createBurger">
       <div class="input-container">
@@ -35,11 +36,15 @@
 
 <script>
 import Swal from 'sweetalert2'
+import Message from '@/components/Message'
 import { reactive, onMounted } from 'vue'
 import services from '@/services'
 
 export default {
   name: "BurgerForm",
+  components: {
+    Message,
+  },
   setup () {
     const state = reactive({
       breads: null,
@@ -54,6 +59,7 @@ export default {
     })
 
     function clearFields() {
+      setTimeout(() => state.message = "", 2000)
       state.name = ""
       state.meat = ""
       state.bread = ""
@@ -88,6 +94,7 @@ export default {
       const dataJson = JSON.stringify(data)    
 
       await services.burguers.store(dataJson).then((data) => {
+        state.message = "Pedido realizado com sucesso!"
         clearFields()
       }).catch(err => {
         Swal.fire({
