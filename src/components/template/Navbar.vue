@@ -5,7 +5,7 @@
         <img id="logo" :src="logo" :alt="alt">
       </router-link>
       <router-link to="/">Fazer Pedido</router-link>
-      <router-link to="/pedidos">Pedidos</router-link>
+      <router-link to="/orders">Pedidos</router-link>
     </div>
   </div>
 </template>

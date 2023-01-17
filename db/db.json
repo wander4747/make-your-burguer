@@ -1,105 +1,95 @@
 {
-    "ingredients": {
-      "breads": [
-        {
-          "id": 1,
-          "type": "Italiano Branco"
-        },
-        {
-          "id": 2,
-          "type": "3 Queijos"
-        },
-        {
-          "id": 3,
-          "type": "Parmesão e Orégano"
-        },
-        {
-          "id": 4,
-          "type": "Integral"
-        }
-      ],
-      "meats": [
-        {
-          "id": 1,
-          "type": "Maminha"
-        },
-        {
-          "id": 2,
-          "type": "Alcatra"
-        },
-        {
-          "id": 3,
-          "type": "Picanha"
-        },
-        {
-          "id": 4,
-          "type": "Veggie burger"
-        }
-      ],
-      "optionals": [
-        {
-          "id": 1,
-          "type": "Bacon"
-        },
-        {
-          "id": 2,
-          "type": "Cheddar"
-        },
-        {
-          "id": 3,
-          "type": "Salame"
-        },
-        {
-          "id": 4,
-          "type": "Tomate"
-        },
-        {
-          "id": 4,
-          "type": "Cebola roxa"
-        },
-        {
-          "id": 4,
-          "type": "Pepino"
-        }
-      ]
-    },
-    "status": [
+  "ingredients": {
+    "breads": [
       {
         "id": 1,
-        "type": "Solicitado"
+        "type": "Italiano Branco"
       },
       {
         "id": 2,
-        "type": "Em produção"
+        "type": "3 Queijos"
       },
       {
         "id": 3,
-        "type": "Finalizado"
-      }
-    ],
-    "burgers": [
-      {
-        "name": "Matheus Battisti",
-        "meat": "Picanha",
-        "bread": "Italiano Branco",
-        "optional": [
-          "Bacon",
-          "Salame",
-          "Cebola roxa"
-        ],
-        "status": "Finalizado",
-        "id": 1
+        "type": "Parmesão e Orégano"
       },
       {
-        "name": "João Coelho",
-        "meat": "Maminha",
-        "bread": "3 Queijos",
-        "optional": [
-          "Salame",
-          "Cebola roxa"
-        ],
-        "status": "Solicitado",
-        "id": 4
+        "id": 4,
+        "type": "Integral"
+      }
+    ],
+    "meats": [
+      {
+        "id": 1,
+        "type": "Maminha"
+      },
+      {
+        "id": 2,
+        "type": "Alcatra"
+      },
+      {
+        "id": 3,
+        "type": "Picanha"
+      },
+      {
+        "id": 4,
+        "type": "Veggie burger"
+      }
+    ],
+    "optionals": [
+      {
+        "id": 1,
+        "type": "Bacon"
+      },
+      {
+        "id": 2,
+        "type": "Cheddar"
+      },
+      {
+        "id": 3,
+        "type": "Salame"
+      },
+      {
+        "id": 4,
+        "type": "Tomate"
+      },
+      {
+        "id": 4,
+        "type": "Cebola roxa"
+      },
+      {
+        "id": 4,
+        "type": "Pepino"
       }
     ]
-  }
+  },
+  "status": [
+    {
+      "id": 1,
+      "type": "Solicitado"
+    },
+    {
+      "id": 2,
+      "type": "Em produção"
+    },
+    {
+      "id": 3,
+      "type": "Finalizado"
+    }
+  ],
+  "burgers": [
+    {
+      "name": "Wander",
+      "meat": "Picanha",
+      "bread": "Italiano Branco",
+      "optionals": [
+        "Bacon",
+        "Cebola roxa",
+        "Tomate",
+        "Cheddar"
+      ],
+      "status": "Em produção",
+      "id": 1
+    }
+  ]
+}

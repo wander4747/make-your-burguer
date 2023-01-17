@@ -67,17 +67,17 @@ export default {
     }
 
     async function getIngredients() {
-        await services.ingredients.get().then((data) => {
-          state.breads = data.data.breads
-          state.meats = data.data.meats
-          state.optionalData = data.data.optionals
-        }).catch(err => {
-          Swal.fire({
-            title: 'OPPS',
-            text: err,
-            icon: 'error',
-          });
-        })
+      await services.ingredients.get().then((data) => {
+        state.breads = data.data.breads
+        state.meats = data.data.meats
+        state.optionalData = data.data.optionals
+      }).catch(err => {
+        Swal.fire({
+          title: 'OPPS',
+          text: err,
+          icon: 'error',
+        });
+      })
     }
 
     async function createBurger(e) {
